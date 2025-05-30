@@ -1,2 +1,2 @@
-# Welcomii-Server
-This is the Server Project for the Welcomii project.
+# Fusion-Server
+this is the fast api project for Fusion-Server.
