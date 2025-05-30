@@ -6,6 +6,7 @@ import logging
 import logging.config
 import logging
 import threading
+import os
 
 from app.Utils.regular_update import job
 from app.Utils.regular_send import send_sms
@@ -60,4 +61,6 @@ async def startup_event():
     sms_thread.start()
 
 if __name__ == "__main__":
-    uvicorn.run("main:app", host="0.0.0.0", port=8001, reload=True)
+    # uvicorn.run("main:app", host="0.0.0.0", port=8001, reload=True)
+    port = int(os.environ.get("PORT", 8001))  # fallback for local testing
+    uvicorn.run(app, host="0.0.0.0", port=port)
