@@ -12,6 +12,7 @@ from app.Utils.regular_update import job
 from app.Utils.regular_send import send_sms
 
 from app.Routers import auth
+from app.Routers import dashboard
 from app.Routers import socket
 from app.Routers import stripe
 import app.Utils.database_handler as crud
@@ -40,6 +41,7 @@ app.add_middleware(
 # app.mount("/static", StaticFiles(directory="static"), name="static")
 
 app.include_router(auth.router, prefix="/api/v1")
+app.include_router(dashboard.router, prefix="/api/v1")
 app.include_router(socket.router, prefix="/api/v1")
 app.include_router(stripe.router, prefix="/api/stripe")
 
