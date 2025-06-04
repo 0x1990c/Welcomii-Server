@@ -160,6 +160,8 @@ yarl==1.9.4
 zipp==1.0.0
 zope.interface==5.4.0
 
+selenium = 4.33.0
+
 # xkit==0.0.0
 # uvloop==0.19.0
 # unattended-upgrades==0.1
